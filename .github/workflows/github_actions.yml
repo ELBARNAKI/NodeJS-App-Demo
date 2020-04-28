@@ -25,7 +25,7 @@ jobs:
       with:
             node-version: 12.x
         # Here we run npm install in CI mode to have clean package installs
-    - run: npm ci
+    - run: npm install
             # The demo I used is simple so we dont need to build it
         # that's why I jumped directly into running the tests
     - run: npm test
