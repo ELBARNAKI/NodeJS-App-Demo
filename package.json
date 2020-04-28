@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "test2.js",
-  "scripts": {
-    "test": "jest \"Error: no test specified\" && exit 1"
-  },
+  "scripts":{
+    "test": "mocha --ui tdd tests/callbacks.js"
+ },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ELBARNAKI/TEST1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ELBARNAKI/TEST1/issues"
+  },
+  "homepage": "https://github.com/ELBARNAKI/TEST1#readme"
 }
