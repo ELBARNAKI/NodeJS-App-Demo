@@ -5,9 +5,9 @@
   "main": "test2.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "start": "node src/test2.js"
+    "start": "node   test2.js"
   },
-  "author": "",
+  "author": "ELBARNAKI",
   "license": "ISC",
   "repository": {
     "type": "git",
