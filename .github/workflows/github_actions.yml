@@ -37,8 +37,8 @@ jobs:
         run: docker build -t nodejs-app . #Construction de l'image docker
       - name: Tags
         run: |
-          docker tag node-app ${{ secrets.Docker_User }}/nodejs-app:${{ github.sha }}  #Affectation d'un nom unique à l'image
-          docker tag node-app ${{ secrets.Docker_User }}/nodejs-app:latest  #Indication de la version d'image 
+          docker tag nodejs-app ${{ secrets.Docker_User }}/nodejs-app:${{ github.sha }}  #Affectation d'un nom unique à l'image
+          docker tag nodejs-app ${{ secrets.Docker_User }}/nodejs-app:latest  #Indication de la version d'image 
       - name: Push
         run: |
           docker push ${{ secrets.Docker_User}}/nodejs-app:${{ github.sha }} # Envoi de l'image au docker Hub
