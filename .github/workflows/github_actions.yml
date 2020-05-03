@@ -1,5 +1,6 @@
 #Nom du workflow
 name: NodeJS App CI/CD
+
 #Définition des déclencheurs des événements
 on:
   push:
