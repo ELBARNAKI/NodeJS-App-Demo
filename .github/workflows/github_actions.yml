@@ -34,7 +34,7 @@ jobs:
       - name: Docker login
         run: docker login -u ${{ secrets.Docker_User }} -p ${{ secrets.Docker_Password }} #Login au Docker Hub
       - name: Build
-        run: docker build -t  back-end #Construction de l'image docker
+        run: docker build -t  back-end . #Construction de l'image docker
       - name: Tags
         run: |
           docker tag back-end ${{ secrets.Docker_User }}/back-end:${{ github.sha }}  #Affectation d'un nom unique à l'image
