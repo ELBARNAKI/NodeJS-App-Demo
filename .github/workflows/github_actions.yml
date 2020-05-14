@@ -34,12 +34,12 @@ jobs:
       - name: Docker login
         run: docker login -u ${{ secrets.Docker_User }} -p ${{ secrets.Docker_Password }} #Login au Docker Hub
       - name: Build
-        run: docker build -t nodejs-app . #Construction de l'image docker
+        run: docker build -t  back-end #Construction de l'image docker
       - name: Tags
         run: |
-          docker tag nodejs-app ${{ secrets.Docker_User }}/nodejs-app:${{ github.sha }}  #Affectation d'un nom unique à l'image
-          docker tag nodejs-app ${{ secrets.Docker_User }}/nodejs-app:latest  #Indication de la version d'image 
+          docker tag back-end ${{ secrets.Docker_User }}/back-end:${{ github.sha }}  #Affectation d'un nom unique à l'image
+          docker tag back-end ${{ secrets.Docker_User }}/back-end:latest  #Indication de la version d'image 
       - name: Push
         run: |
-          docker push ${{ secrets.Docker_User}}/nodejs-app:${{ github.sha }} # Envoi de l'image au docker Hub
-          docker push ${{ secrets.Docker_User }}/nodejs-app:latest
+          docker push ${{ secrets.Docker_User}}/back-end:${{ github.sha }} # Envoi de l'image au docker Hub
+          docker push ${{ secrets.Docker_User }}/back-end:latest
